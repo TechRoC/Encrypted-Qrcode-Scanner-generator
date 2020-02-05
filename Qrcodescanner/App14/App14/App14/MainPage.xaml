@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:App14"
+             xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+             x:Class="App14.MainPage">
+
+    <StackLayout>
+        
+        <forms:AnimationView 
+	x:Name="animationView" 
+	
+	Animation="Scanner.json" 
+	Loop="True" 
+	AutoPlay="True"
+            HeightRequest="400"
+            WidthRequest="400"
+	VerticalOptions="FillAndExpand" 
+	HorizontalOptions="Start" 
+            Margin="30,10,0,0"/>
+        <Button x:Name="b1" Text="Scan it" Clicked="Button_Clicked" HeightRequest="50" WidthRequest="50" Margin="30,100,30,30"></Button>
+        <Label  x:Name="mycode" TextColor="Red" HorizontalOptions="Center"></Label>
+        <WebView x:Name="Browser" HeightRequest="1020" WidthRequest="1000"/>
+    </StackLayout>
+
+</ContentPage>
